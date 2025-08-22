@@ -13,6 +13,10 @@ const port = process.env.PORT || 4000;
 
 dbConnect();
 
+app.get('/',(req,res)=>{
+    return res.send('Server is live');
+})
+
 app.listen(port,()=>{
     console.log(`Server is running on port : ${port}`);
 })
